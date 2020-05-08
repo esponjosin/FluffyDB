@@ -22,6 +22,18 @@ const db = new FluffyDB({
 })
 ```
 
+## Changelogs
+
+# 0.0.6
+```
+Fixed a error
+```
+
+# 0.0.5
+```
+All functions were created from 0 and the queue system was removed because it caused errors
+```
+
 ## Functions
 
 All functions support `.` Ex:
