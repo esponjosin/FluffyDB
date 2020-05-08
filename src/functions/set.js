@@ -39,9 +39,9 @@ module.exports = {
                 let parameters = id.split('.')
 
                 let keys = await ketFinder(file_data, parameters).then(i => i).catch(e => new Object({error: e}))
-                    
-                if(typeof keys == 'object' && keys.error) reject(new FError(`The ${keys.error} parameter not exist`));
-                else reject(new FError(`The ${keys.error[0]} parameter is not an object`));
+                
+                if(typeof keys == 'object' && typeof keys.error == 'string') reject(new FError(`The ${keys.error} parameter not exist`));
+                else if(typeof keys == 'object' && Array.isArray(keys.error)) reject(new FError(`The ${keys.error[0]} parameter is not an object`));
 
                 keys[0][keys[1]] = item;
                 

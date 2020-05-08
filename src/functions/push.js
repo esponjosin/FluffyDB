@@ -42,8 +42,8 @@ module.exports = {
 
                 let keys = await ketFinder(file_data, parameters).then(i => i).catch(e => new Object({error: e}))
                     
-                if(typeof keys == 'object' && keys.error) reject(new FError(`The ${keys.error} parameter not exist`));
-                else reject(new FError(`The ${keys.error[0]} parameter is not an object`));
+                if(typeof keys == 'object' && typeof keys.error == 'string') reject(new FError(`The ${keys.error} parameter not exist`));
+                else if(typeof keys == 'object' && Array.isArray(keys.error)) reject(new FError(`The ${keys.error[0]} parameter is not an object`));
 
                 if(keys[0].hasOwnProperty(keys[1]) && !Array.isArray(keys[0][keys[1]])) return reject(new FError(`The ${keys[1]} parameter is not a array`));
                 

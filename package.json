@@ -1,6 +1,6 @@
 {
   "name": "fluffydb",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Database project in nodejs based on fs",
   "main": "src/main.js",
   "scripts": {
