@@ -1,0 +1,25 @@
+{
+  "name": "fluffydb",
+  "version": "0.0.5",
+  "description": "Database project in nodejs based on fs",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/esponjosin/flufflydb.git"
+  },
+  "keywords": [
+    "json",
+    "db",
+    "jsondb"
+  ],
+  "author": "Esponjoin#0004",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/esponjosin/flufflydb/issues"
+  },
+  "homepage": "https://github.com/esponjosin/flufflydb#readme",
+  "dependencies": {}
+}
